@@ -139,11 +139,3 @@ export function HeartIcon({ stroke = '#17A9BD' }) {
   )
 }
 
-export function UserIcon({ stroke = '#17A9BD' }) {
-  return (
-    <svg {...base} stroke={stroke}>
-      <circle cx="12" cy="8.5" r="3.5" />
-      <path d="M5 19.5c0-3.5 3-6 7-6s7 2.5 7 6" />
-    </svg>
-  )
-}

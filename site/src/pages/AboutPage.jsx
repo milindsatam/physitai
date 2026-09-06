@@ -2,7 +2,10 @@ import { colors, eyebrow, heading2, bodyCopy, iconChip } from '../lib/theme'
 import { useRevealAnimations } from '../hooks/useRevealAnimations'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import Contact from '../components/Contact'
-import { TargetIcon, HeartIcon, ClipboardIcon, TrendUpIcon, ShieldCheckIcon, UserIcon } from '../components/icons'
+import { TargetIcon, HeartIcon, ClipboardIcon, TrendUpIcon, ShieldCheckIcon } from '../components/icons'
+import photoRajani from '../assets/images/team-rajani-jadhav.webp'
+import photoManjusha from '../assets/images/team-manjusha-pathade.webp'
+import photoAnjali from '../assets/images/team-anjali-randive.webp'
 
 const cardBase = {
   background: colors.white,
@@ -34,9 +37,9 @@ const values = [
 ]
 
 const team = [
-  { name: 'Dr. Rajani Pandurang Jadhav', role: 'Mentor', line: 'Radiologist and clinical advisor guiding our medical direction.' },
-  { name: 'Mrs. Manjusha Pathade', role: 'Founder and CEO / CTO', line: 'Leads product, technology, and the AI platform.' },
-  { name: 'Mrs. Anjali Yogesh Randive', role: 'Business Analyst', line: 'Drives strategy, operations, and growth.' },
+  { name: 'Dr. Rajani Pandurang Jadhav', role: 'Mentor', line: 'Radiologist and clinical advisor guiding our medical direction.', photo: photoRajani },
+  { name: 'Mrs. Manjusha Pathade', role: 'Founder and CEO / CTO', line: 'Leads product, technology, and the AI platform.', photo: photoManjusha },
+  { name: 'Mrs. Anjali Yogesh Randive', role: 'Business Analyst', line: 'Drives strategy, operations, and growth.', photo: photoAnjali },
 ]
 
 const helpItems = [
@@ -160,35 +163,23 @@ function AboutPage() {
             {team.map((member, i) => (
               <div
                 key={member.name}
-                className="hover-card"
+                className="hover-card hover-card-img"
                 data-reveal
                 data-reveal-delay={delays[i]}
                 style={{ background: colors.white, borderRadius: 16, overflow: 'hidden', boxShadow: '0 4px 24px rgba(10,46,92,0.06)' }}
               >
-                <div
+                <img
+                  src={member.photo}
+                  alt={member.name}
                   style={{
+                    display: 'block',
+                    width: '100%',
                     aspectRatio: '4 / 5',
-                    background: colors.tealTint,
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    height: 'auto',
+                    objectFit: 'cover',
+                    objectPosition: 'center 20%',
                   }}
-                >
-                  <div
-                    style={{
-                      width: 72,
-                      height: 72,
-                      borderRadius: '50%',
-                      background: colors.white,
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      boxShadow: '0 4px 16px rgba(10,46,92,0.10)',
-                    }}
-                  >
-                    <UserIcon />
-                  </div>
-                </div>
+                />
                 <div style={{ padding: 24 }}>
                   <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, fontSize: 16.5, color: colors.navy }}>
                     {member.name}
@@ -243,11 +234,6 @@ function AboutPage() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Location */}
-      <section style={{ background: colors.bg, padding: '0 clamp(24px,4vw,48px) clamp(56px,7vw,96px)' }}>
-        <p style={{ textAlign: 'center', fontSize: 14.5, color: colors.muted, margin: 0 }}>Based in Karnataka, India.</p>
       </section>
 
       {/* CTA band, reused unchanged */}
