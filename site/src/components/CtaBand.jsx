@@ -46,13 +46,13 @@ function CtaBand() {
           >
             Request a Demo
           </Link>
-          <a
-            href="#solution"
+          <Link
+            to="/#solution"
             className="btn-outline-white"
             style={{ ...pillOutlineOnDark, padding: '14.5px 30px' }}
           >
             See How It Works
-          </a>
+          </Link>
         </div>
       </div>
     </section>

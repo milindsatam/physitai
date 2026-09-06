@@ -17,6 +17,10 @@
 
 html {
   scroll-behavior: smooth;
+  /* Without this, the browser's scroll-anchoring heuristic "corrects" the
+     scroll position after a route swap changes page height above the fold,
+     fighting ScrollManager's explicit reset-to-top on navigation. */
+  overflow-anchor: none;
 }
 
 body {
@@ -40,6 +44,13 @@ button {
 
 img {
   max-width: 100%;
+}
+
+/* Keep anchor-scrolled sections from landing partly hidden under the sticky
+   header (applies to any element targeted by an in-page or cross-page hash
+   link, current and future). */
+[id] {
+  scroll-margin-top: 90px;
 }
 
 /* ---- Header ---- */

@@ -35,13 +35,25 @@ function Footer() {
             <div style={{ fontSize: 14.5, lineHeight: 1.7, color: '#B9CBE2', marginTop: 20, maxWidth: '34ch' }}>
               Making pain visible. Making recovery measurable.
             </div>
+            <div style={{ fontSize: 13, color: '#7E9CC2', marginTop: 14 }}>
+              A product by{' '}
+              <a
+                href="https://simplifyne.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="nav-link"
+                style={{ color: '#DCE7F4', fontWeight: 600 }}
+              >
+                Simplifyne Technologies
+              </a>
+            </div>
           </div>
           <div style={{ minWidth: 0 }}>
             <div style={navLabel}>Navigate</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 20 }}>
-              <a href="#solution" className="nav-link" style={navLink}>Solution</a>
-              <a href="#technology" className="nav-link" style={navLink}>Technology</a>
-              <a href="#serve" className="nav-link" style={navLink}>Who We Serve</a>
+              <Link to="/#solution" className="nav-link" style={navLink}>Solution</Link>
+              <Link to="/#technology" className="nav-link" style={navLink}>Technology</Link>
+              <Link to="/#serve" className="nav-link" style={navLink}>Who We Serve</Link>
               <Link to="/about" className="nav-link" style={navLink}>About</Link>
               <Link to="/contact" className="nav-link" style={navLink}>Contact</Link>
             </div>

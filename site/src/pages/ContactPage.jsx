@@ -39,7 +39,7 @@ const inputStyle = {
 const details = [
   { Icon: MailIcon, label: 'Email', value: 'hello@physitai.example', href: 'mailto:hello@physitai.example' },
   { Icon: PhoneIcon, label: 'Phone', value: '+00 000 000 0000', href: 'tel:+00000000000' },
-  { Icon: PinIcon, label: 'Location', value: 'Karnataka, India' },
+  { Icon: PinIcon, label: 'Location', value: 'Belagavi, Karnataka, India' },
 ]
 
 function ContactDetails() {
@@ -189,7 +189,7 @@ function ContactPage() {
       <section
         style={{
           background: 'linear-gradient(115deg,#07213F 0%,#0A2E5C 45%,#116A8C 100%)',
-          padding: 'clamp(72px,9vw,120px) clamp(24px,4vw,48px) clamp(160px,18vw,220px)',
+          padding: 'clamp(88px,11vw,140px) clamp(24px,4vw,48px) clamp(220px,24vw,300px)',
         }}
       >
         <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
@@ -230,7 +230,7 @@ function ContactPage() {
         style={{
           position: 'relative',
           zIndex: 2,
-          marginTop: 'calc(-1 * clamp(120px,14vw,180px))',
+          marginTop: 'calc(-1 * clamp(160px,18vw,220px))',
           background: colors.bg,
           padding: '0 clamp(16px,3vw,32px) clamp(56px,7vw,96px)',
         }}
@@ -253,8 +253,8 @@ function ContactPage() {
       <section style={{ background: colors.bg, padding: '0 clamp(24px,4vw,48px) clamp(56px,7vw,96px)' }}>
         <div style={{ maxWidth: 1240, margin: '0 auto' }} data-reveal>
           <iframe
-            title="PhysiTAI location"
-            src="https://maps.google.com/maps?q=Karnataka,India&z=7&output=embed"
+            title="PhysiTAI location in Belagavi, Karnataka"
+            src="https://maps.google.com/maps?q=Belagavi,Karnataka,India&z=12&output=embed"
             style={{ display: 'block', width: '100%', height: 'clamp(280px,36vw,420px)', border: 0, borderRadius: 24, boxShadow: cardShadow }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
