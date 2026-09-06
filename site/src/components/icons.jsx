@@ -120,3 +120,30 @@ export function ShieldCheckIcon({ stroke = '#17A9BD' }) {
     </svg>
   )
 }
+
+export function TargetIcon({ stroke = '#17A9BD' }) {
+  return (
+    <svg {...base} stroke={stroke}>
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="5.5" />
+      <circle cx="12" cy="12" r="2" />
+    </svg>
+  )
+}
+
+export function HeartIcon({ stroke = '#17A9BD' }) {
+  return (
+    <svg {...base} stroke={stroke}>
+      <path d="M12 20 C7 16 3 12.5 3 8.5 C3 5.8 5.1 4 7.5 4 C9.4 4 11 5.1 12 6.8 C13 5.1 14.6 4 16.5 4 C18.9 4 21 5.8 21 8.5 C21 12.5 17 16 12 20 Z" />
+    </svg>
+  )
+}
+
+export function UserIcon({ stroke = '#17A9BD' }) {
+  return (
+    <svg {...base} stroke={stroke}>
+      <circle cx="12" cy="8.5" r="3.5" />
+      <path d="M5 19.5c0-3.5 3-6 7-6s7 2.5 7 6" />
+    </svg>
+  )
+}

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logo from '../assets/images/physitai-logo.png'
 import { colors } from '../lib/theme'
 
@@ -41,7 +42,7 @@ function Footer() {
               <a href="#solution" className="nav-link" style={navLink}>Solution</a>
               <a href="#technology" className="nav-link" style={navLink}>Technology</a>
               <a href="#serve" className="nav-link" style={navLink}>Who We Serve</a>
-              <a href="#about" className="nav-link" style={navLink}>About</a>
+              <Link to="/about" className="nav-link" style={navLink}>About</Link>
               <a href="#contact" className="nav-link" style={navLink}>Contact</a>
             </div>
           </div>

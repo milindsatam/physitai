@@ -22,9 +22,9 @@ const statLine = {
   marginTop: 14,
 }
 
-function About() {
+function WhyItMatters() {
   return (
-    <section id="about" style={{ background: colors.bg, padding: '0 clamp(16px,3vw,32px) clamp(48px,6vw,80px)' }}>
+    <section id="why-it-matters" style={{ background: colors.bg, padding: '0 clamp(16px,3vw,32px) clamp(48px,6vw,80px)' }}>
       <div style={panelShell}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: 'clamp(72px,9vw,128px) clamp(24px,4vw,48px)' }}>
           <div data-reveal style={{ maxWidth: 720 }}>
@@ -61,4 +61,4 @@ function About() {
   )
 }
 
-export default About
+export default WhyItMatters

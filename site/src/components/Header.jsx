@@ -1,4 +1,5 @@
 import { forwardRef } from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../assets/images/physitai-logo.png'
 import { pillPrimary } from '../lib/theme'
 
@@ -35,9 +36,9 @@ const Header = forwardRef(function Header(_props, ref) {
             whiteSpace: 'nowrap',
           }}
         >
-          <a href="#about" className="nav-link" style={{ fontSize: 14.5, fontWeight: 500, color: '#0E1726' }}>
+          <Link to="/about" className="nav-link" style={{ fontSize: 14.5, fontWeight: 500, color: '#0E1726' }}>
             About
-          </a>
+          </Link>
           <a href="#contact" className="nav-link" style={{ fontSize: 14.5, fontWeight: 500, color: '#0E1726' }}>
             Contact
           </a>
