@@ -18,28 +18,31 @@ const Header = forwardRef(function Header(_props, ref) {
         style={{
           maxWidth: 1200,
           margin: '0 auto',
-          padding: '16px clamp(16px,4vw,48px)',
+          padding: '16px clamp(12px,3.6vw,48px)',
           display: 'flex',
           alignItems: 'center',
-          gap: 'clamp(10px,3vw,20px)',
+          gap: 'clamp(8px,2.6vw,20px)',
         }}
       >
-        <a href="#top" style={{ display: 'flex', alignItems: 'center', flex: '0 0 auto', padding: '2px 0' }}>
-          <img src={logo} alt="PhysiTAI" style={{ display: 'block', height: 'clamp(26px,7vw,32px)', width: 'auto' }} />
-        </a>
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', flex: '0 0 auto', padding: '2px 0' }}>
+          <img src={logo} alt="PhysiTAI" style={{ display: 'block', height: 'clamp(22px,6.5vw,32px)', width: 'auto' }} />
+        </Link>
         <nav
           style={{
             marginLeft: 'auto',
             display: 'flex',
             alignItems: 'center',
-            gap: 'clamp(14px,2.4vw,32px)',
+            gap: 'clamp(8px,2.2vw,32px)',
             whiteSpace: 'nowrap',
           }}
         >
-          <Link to="/about" className="nav-link" style={{ fontSize: 14.5, fontWeight: 500, color: '#0E1726' }}>
+          <Link to="/" className="nav-link" style={{ fontSize: 'clamp(12.5px,3.6vw,14.5px)', fontWeight: 500, color: '#0E1726' }}>
+            Home
+          </Link>
+          <Link to="/about" className="nav-link" style={{ fontSize: 'clamp(12.5px,3.6vw,14.5px)', fontWeight: 500, color: '#0E1726' }}>
             About
           </Link>
-          <Link to="/contact" className="nav-link" style={{ fontSize: 14.5, fontWeight: 500, color: '#0E1726' }}>
+          <Link to="/contact" className="nav-link" style={{ fontSize: 'clamp(12.5px,3.6vw,14.5px)', fontWeight: 500, color: '#0E1726' }}>
             Contact
           </Link>
         </nav>

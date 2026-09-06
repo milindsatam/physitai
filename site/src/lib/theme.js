@@ -80,9 +80,9 @@ export const iconChipOnNavy = {
 export const pillPrimary = {
   background: colors.navy,
   color: colors.white,
-  fontSize: 14.5,
+  fontSize: 'clamp(12.5px,3.8vw,14.5px)',
   fontWeight: 600,
-  padding: '12px clamp(14px,4vw,24px)',
+  padding: '12px clamp(10px,3.2vw,24px)',
   borderRadius: 999,
   display: 'inline-block',
 }
