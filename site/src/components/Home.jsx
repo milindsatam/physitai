@@ -6,7 +6,6 @@ import Solution from './Solution'
 import Technology from './Technology'
 import Serve from './Serve'
 import About from './About'
-import ImpactBand from './ImpactBand'
 import Contact from './Contact'
 import Footer from './Footer'
 import { useHeroPin } from '../hooks/useHeroPin'
@@ -24,7 +23,7 @@ function Home() {
   useRevealAnimations(rootRef)
 
   return (
-    <div id="top" ref={rootRef} style={{ width: '100%', overflowX: 'hidden', background: colors.bg }}>
+    <div id="top" ref={rootRef} style={{ width: '100%', background: colors.bg }}>
       <Header ref={headerRef} />
 
       <div style={{ position: 'relative' }}>
@@ -38,7 +37,6 @@ function Home() {
         <Technology />
         <Serve />
         <About />
-        <ImpactBand />
         <Contact />
         <Footer />
       </div>

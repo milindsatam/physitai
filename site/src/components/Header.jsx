@@ -17,21 +17,21 @@ const Header = forwardRef(function Header(_props, ref) {
         style={{
           maxWidth: 1200,
           margin: '0 auto',
-          padding: '16px clamp(24px,4vw,48px)',
+          padding: '16px clamp(16px,4vw,48px)',
           display: 'flex',
           alignItems: 'center',
-          gap: 20,
+          gap: 'clamp(10px,3vw,20px)',
         }}
       >
         <a href="#top" style={{ display: 'flex', alignItems: 'center', flex: '0 0 auto', padding: '2px 0' }}>
-          <img src={logo} alt="PhysiTAI" style={{ display: 'block', height: 32, width: 'auto' }} />
+          <img src={logo} alt="PhysiTAI" style={{ display: 'block', height: 'clamp(26px,7vw,32px)', width: 'auto' }} />
         </a>
         <nav
           style={{
             marginLeft: 'auto',
             display: 'flex',
             alignItems: 'center',
-            gap: 'clamp(18px,2.4vw,32px)',
+            gap: 'clamp(14px,2.4vw,32px)',
             whiteSpace: 'nowrap',
           }}
         >

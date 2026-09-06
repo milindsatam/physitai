@@ -82,7 +82,7 @@ export const pillPrimary = {
   color: colors.white,
   fontSize: 14.5,
   fontWeight: 600,
-  padding: '12px 24px',
+  padding: '12px clamp(14px,4vw,24px)',
   borderRadius: 999,
   display: 'inline-block',
 }
