@@ -1,29 +1,30 @@
 import heroSpine from '../assets/images/hero-spine.png'
 import { colors, pillPrimaryOnDark, pillOutlineOnDark } from '../lib/theme'
 
-function Hero({ heroRef, heroInnerRef, bgRef, figureRef }) {
+function Hero({ heroRef, pinned }) {
   return (
     <section
       ref={heroRef}
       style={{
-        position: 'sticky',
-        top: 0,
+        position: pinned ? 'fixed' : 'relative',
+        top: pinned ? 0 : 'auto',
+        left: pinned ? 0 : 'auto',
+        right: pinned ? 0 : 'auto',
+        width: '100%',
+        zIndex: pinned ? 1 : 'auto',
         overflow: 'hidden',
         background: 'linear-gradient(115deg,#07213F 0%,#0A2E5C 45%,#116A8C 100%)',
       }}
     >
       <div
-        ref={bgRef}
         style={{
           position: 'absolute',
           inset: '-15% -10%',
           background:
             'radial-gradient(60% 55% at 78% 30%, rgba(23,169,189,0.30) 0%, rgba(23,169,189,0) 70%)',
-          willChange: 'transform',
         }}
       />
       <div
-        ref={heroInnerRef}
         style={{
           position: 'relative',
           maxWidth: 1200,
@@ -33,7 +34,6 @@ function Hero({ heroRef, heroInnerRef, bgRef, figureRef }) {
           gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))',
           gap: 'clamp(28px,3vw,48px)',
           alignItems: 'center',
-          willChange: 'transform,opacity',
         }}
       >
         <div style={{ minWidth: 0, position: 'relative', zIndex: 2 }}>
@@ -90,14 +90,12 @@ function Hero({ heroRef, heroInnerRef, bgRef, figureRef }) {
           </div>
         </div>
         <div
-          ref={figureRef}
           style={{
             position: 'relative',
             minWidth: 0,
             marginLeft: 'clamp(-64px,-3vw,0px)',
             alignSelf: 'end',
             marginBottom: 'calc(-1 * clamp(80px,10vw,140px))',
-            willChange: 'transform',
           }}
         >
           <img

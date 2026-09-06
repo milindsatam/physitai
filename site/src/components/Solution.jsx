@@ -1,4 +1,3 @@
-import { forwardRef } from 'react'
 import dashboard from '../assets/images/dashboard.png'
 import { colors, eyebrow, heading2, panelShell } from '../lib/theme'
 import { ClockIcon, CameraIcon, ScanSearchIcon, CompassIcon, TrendUpIcon } from './icons'
@@ -61,12 +60,13 @@ const stageRow = (num, label) => (
   </div>
 )
 
-const Solution = forwardRef(function Solution(_props, ref) {
+function Solution() {
   return (
     <section id="solution" style={{ background: colors.bg, padding: '0 clamp(16px,3vw,32px) clamp(48px,6vw,80px)' }}>
-      <div ref={ref} style={panelShell}>
+      <div style={panelShell}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: 'clamp(72px,9vw,128px) clamp(24px,4vw,48px)' }}>
           <div
+            data-reveal
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
@@ -87,6 +87,8 @@ const Solution = forwardRef(function Solution(_props, ref) {
 
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, marginTop: 'clamp(64px,8vw,104px)' }}>
             <div
+              className="hover-card"
+              data-reveal
               style={{
                 position: 'relative',
                 flex: '3 1 460px',
@@ -120,7 +122,12 @@ const Solution = forwardRef(function Solution(_props, ref) {
               </div>
             </div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 24, flex: '1 1 320px', minWidth: 0 }}>
-              <div style={{ background: colors.navy, borderRadius: 16, padding: 32, boxShadow: '0 4px 24px rgba(10,46,92,0.06)' }}>
+              <div
+                className="hover-card"
+                data-reveal
+                data-reveal-delay="1"
+                style={{ background: colors.navy, borderRadius: 16, padding: 32, boxShadow: '0 4px 24px rgba(10,46,92,0.06)' }}
+              >
                 <div style={{ width: 44, height: 44, borderRadius: 12, background: 'rgba(255,255,255,0.12)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <ClockIcon />
                 </div>
@@ -131,7 +138,7 @@ const Solution = forwardRef(function Solution(_props, ref) {
                   Baseline to discharge, every session measured.
                 </div>
               </div>
-              <div style={{ background: colors.card, borderRadius: 16, padding: 32, flex: 1 }}>
+              <div className="hover-card" data-reveal data-reveal-delay="2" style={{ background: colors.card, borderRadius: 16, padding: 32, flex: 1 }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                   {stageRow('01', 'Pre-Session Baseline')}
                   <div style={{ height: 1, background: colors.border }} />
@@ -154,14 +161,14 @@ const Solution = forwardRef(function Solution(_props, ref) {
             }}
           >
             <div style={loopGrid}>
-              <div style={loopTile}>
+              <div className="hover-card" data-reveal style={loopTile}>
                 <div style={loopIcon}>
                   <CameraIcon />
                 </div>
                 <div style={loopTitle}>Capture</div>
                 <div style={loopLine}>High-resolution thermal scans in seconds.</div>
               </div>
-              <div style={loopTile}>
+              <div className="hover-card" data-reveal data-reveal-delay="1" style={loopTile}>
                 <div style={loopIcon}>
                   <ScanSearchIcon />
                 </div>
@@ -170,14 +177,14 @@ const Solution = forwardRef(function Solution(_props, ref) {
               </div>
             </div>
             <div style={loopGrid}>
-              <div style={loopTile}>
+              <div className="hover-card" data-reveal data-reveal-delay="2" style={loopTile}>
                 <div style={loopIcon}>
                   <CompassIcon />
                 </div>
                 <div style={loopTitle}>Guide</div>
                 <div style={loopLine}>Protocol prompts during the session.</div>
               </div>
-              <div style={loopTile}>
+              <div className="hover-card" data-reveal data-reveal-delay="3" style={loopTile}>
                 <div style={loopIcon}>
                   <TrendUpIcon />
                 </div>
@@ -190,6 +197,6 @@ const Solution = forwardRef(function Solution(_props, ref) {
       </div>
     </section>
   )
-})
+}
 
 export default Solution

@@ -1,11 +1,10 @@
-import { forwardRef } from 'react'
 import { colors, eyebrow, pillPrimaryOnDark, pillOutlineOnDark } from '../lib/theme'
 
-const Contact = forwardRef(function Contact(_props, ref) {
+function Contact() {
   return (
     <section id="contact" style={{ background: colors.bg, padding: 'clamp(72px,9vw,128px) clamp(16px,3vw,32px)' }}>
       <div
-        ref={ref}
+        data-reveal
         style={{
           maxWidth: 1240,
           margin: '0 auto',
@@ -57,6 +56,6 @@ const Contact = forwardRef(function Contact(_props, ref) {
       </div>
     </section>
   )
-})
+}
 
 export default Contact

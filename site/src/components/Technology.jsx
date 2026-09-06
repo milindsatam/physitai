@@ -1,4 +1,3 @@
-import { forwardRef } from 'react'
 import thermalBack from '../assets/images/thermal-back.png'
 import { colors, eyebrow, heading2, panelShell } from '../lib/theme'
 import { BarsIcon, ScanSearchIcon, ShieldCheckIcon } from './icons'
@@ -37,10 +36,10 @@ const featureLine = {
   marginTop: 6,
 }
 
-const Technology = forwardRef(function Technology(_props, ref) {
+function Technology() {
   return (
     <section id="technology" style={{ background: colors.bg, padding: '0 clamp(16px,3vw,32px) clamp(48px,6vw,80px)' }}>
-      <div ref={ref} style={panelShell}>
+      <div style={panelShell}>
         <div
           style={{
             maxWidth: 1200,
@@ -52,14 +51,14 @@ const Technology = forwardRef(function Technology(_props, ref) {
             alignItems: 'center',
           }}
         >
-          <div style={{ position: 'relative', minWidth: 0 }}>
+          <div data-reveal style={{ position: 'relative', minWidth: 0 }}>
             <img
               src={thermalBack}
               alt="Thermal scan of a patient's back"
               style={{ display: 'block', width: '100%', height: 'auto', borderRadius: 16, boxShadow: '0 4px 24px rgba(10,46,92,0.10)' }}
             />
           </div>
-          <div style={{ minWidth: 0 }}>
+          <div data-reveal data-reveal-delay="1" style={{ minWidth: 0 }}>
             <div style={eyebrow}>The Technology</div>
             <h2 style={{ ...heading2, maxWidth: '22ch' }}>Thermal imaging meets clinical AI.</h2>
             <p style={{ fontSize: 16.5, lineHeight: 1.75, color: colors.muted, margin: '20px 0 0', maxWidth: '54ch', textWrap: 'pretty' }}>
@@ -68,7 +67,7 @@ const Technology = forwardRef(function Technology(_props, ref) {
               biomarkers they can measure.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginTop: 40 }}>
-              <div style={featureRow}>
+              <div className="hover-card" data-reveal style={featureRow}>
                 <div style={featureIcon}>
                   <BarsIcon />
                 </div>
@@ -77,7 +76,7 @@ const Technology = forwardRef(function Technology(_props, ref) {
                   <div style={featureLine}>Thermal asymmetry, recovery score, perfusion index.</div>
                 </div>
               </div>
-              <div style={featureRow}>
+              <div className="hover-card" data-reveal data-reveal-delay="1" style={featureRow}>
                 <div style={featureIcon}>
                   <ScanSearchIcon />
                 </div>
@@ -86,7 +85,7 @@ const Technology = forwardRef(function Technology(_props, ref) {
                   <div style={featureLine}>Detects patterns the eye can miss.</div>
                 </div>
               </div>
-              <div style={featureRow}>
+              <div className="hover-card" data-reveal data-reveal-delay="2" style={featureRow}>
                 <div style={featureIcon}>
                   <ShieldCheckIcon />
                 </div>
@@ -101,6 +100,6 @@ const Technology = forwardRef(function Technology(_props, ref) {
       </div>
     </section>
   )
-})
+}
 
 export default Technology

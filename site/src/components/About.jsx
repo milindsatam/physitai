@@ -1,4 +1,3 @@
-import { forwardRef } from 'react'
 import { colors, eyebrow, heading2, panelShell } from '../lib/theme'
 
 const stat = {
@@ -23,12 +22,12 @@ const statLine = {
   marginTop: 14,
 }
 
-const About = forwardRef(function About(_props, ref) {
+function About() {
   return (
     <section id="about" style={{ background: colors.bg, padding: '0 clamp(16px,3vw,32px) clamp(48px,6vw,80px)' }}>
-      <div ref={ref} style={panelShell}>
+      <div style={panelShell}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: 'clamp(72px,9vw,128px) clamp(24px,4vw,48px)' }}>
-          <div style={{ maxWidth: 720 }}>
+          <div data-reveal style={{ maxWidth: 720 }}>
             <div style={eyebrow}>Why It Matters</div>
             <h2 style={heading2}>Designed to make recovery faster and clearer.</h2>
           </div>
@@ -40,15 +39,15 @@ const About = forwardRef(function About(_props, ref) {
               marginTop: 'clamp(56px,7vw,96px)',
             }}
           >
-            <div style={stat}>
+            <div className="hover-card" data-reveal style={stat}>
               <div style={statNumber}>25 to 35%</div>
               <div style={statLine}>Designed to support faster recovery.</div>
             </div>
-            <div style={stat}>
+            <div className="hover-card" data-reveal data-reveal-delay="1" style={stat}>
               <div style={statNumber}>Up to 40%</div>
               <div style={statLine}>Aims to improve treatment adherence.</div>
             </div>
-            <div style={stat}>
+            <div className="hover-card" data-reveal data-reveal-delay="2" style={stat}>
               <div style={statNumber}>Up to 30%</div>
               <div style={statLine}>Built to help reduce recurrence.</div>
             </div>
@@ -60,6 +59,6 @@ const About = forwardRef(function About(_props, ref) {
       </div>
     </section>
   )
-})
+}
 
 export default About

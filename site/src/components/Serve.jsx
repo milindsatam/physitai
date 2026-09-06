@@ -1,4 +1,3 @@
-import { forwardRef } from 'react'
 import serveClinics from '../assets/images/serve-clinics.png'
 import serveSports from '../assets/images/serve-sports.png'
 import serveHospitals from '../assets/images/serve-hospitals.png'
@@ -50,11 +49,15 @@ const items = [
   { img: serveDefense, alt: 'Clinician attending to a kneeling soldier', title: 'Defense and Tactical Units', line: 'Field readiness and injury management.' },
 ]
 
-const Serve = forwardRef(function Serve(_props, ref) {
+const delays = ['0', '1', '2', '3']
+
+function Serve() {
   return (
     <section id="serve" style={{ background: colors.bg }}>
-      <div ref={ref} style={{ maxWidth: 1200, margin: '0 auto', padding: 'clamp(72px,9vw,128px) clamp(24px,4vw,48px)' }}>
-        <h2 style={{ ...heading2, margin: 0, maxWidth: '24ch' }}>Built for everyone who cares about recovery.</h2>
+      <div style={{ maxWidth: 1200, margin: '0 auto', padding: 'clamp(72px,9vw,128px) clamp(24px,4vw,48px)' }}>
+        <h2 data-reveal style={{ ...heading2, margin: 0, maxWidth: '24ch' }}>
+          Built for everyone who cares about recovery.
+        </h2>
         <div
           style={{
             display: 'grid',
@@ -64,8 +67,14 @@ const Serve = forwardRef(function Serve(_props, ref) {
           }}
         >
           <div style={gridPair}>
-            {items.slice(0, 2).map((it) => (
-              <div style={card} key={it.title}>
+            {items.slice(0, 2).map((it, i) => (
+              <div
+                className="hover-card hover-card-img"
+                data-reveal
+                data-reveal-delay={delays[i]}
+                style={card}
+                key={it.title}
+              >
                 <img src={it.img} alt={it.alt} style={cardImg} />
                 <div style={{ padding: 28 }}>
                   <div style={cardTitle}>{it.title}</div>
@@ -75,8 +84,14 @@ const Serve = forwardRef(function Serve(_props, ref) {
             ))}
           </div>
           <div style={gridPair}>
-            {items.slice(2, 4).map((it) => (
-              <div style={card} key={it.title}>
+            {items.slice(2, 4).map((it, i) => (
+              <div
+                className="hover-card hover-card-img"
+                data-reveal
+                data-reveal-delay={delays[i + 2]}
+                style={card}
+                key={it.title}
+              >
                 <img src={it.img} alt={it.alt} style={cardImg} />
                 <div style={{ padding: 28 }}>
                   <div style={cardTitle}>{it.title}</div>
@@ -89,6 +104,6 @@ const Serve = forwardRef(function Serve(_props, ref) {
       </div>
     </section>
   )
-})
+}
 
 export default Serve

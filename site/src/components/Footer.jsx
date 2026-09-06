@@ -38,11 +38,11 @@ function Footer() {
           <div style={{ minWidth: 0 }}>
             <div style={navLabel}>Navigate</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 20 }}>
-              <a href="#solution" style={navLink}>Solution</a>
-              <a href="#technology" style={navLink}>Technology</a>
-              <a href="#serve" style={navLink}>Who We Serve</a>
-              <a href="#about" style={navLink}>About</a>
-              <a href="#contact" style={navLink}>Contact</a>
+              <a href="#solution" className="nav-link" style={navLink}>Solution</a>
+              <a href="#technology" className="nav-link" style={navLink}>Technology</a>
+              <a href="#serve" className="nav-link" style={navLink}>Who We Serve</a>
+              <a href="#about" className="nav-link" style={navLink}>About</a>
+              <a href="#contact" className="nav-link" style={navLink}>Contact</a>
             </div>
           </div>
           <div style={{ minWidth: 0 }}>

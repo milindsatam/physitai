@@ -1,4 +1,3 @@
-import { forwardRef } from 'react'
 import { colors, eyebrow, heading2 } from '../lib/theme'
 import { GlobeIcon, BrokenCircleIcon, TrendDownIcon, ClipboardIcon } from './icons'
 
@@ -46,13 +45,12 @@ const gridPair = {
   alignItems: 'stretch',
 }
 
-const Problem = forwardRef(function Problem(_props, ref) {
+function Problem() {
   return (
     <section
       style={{ background: colors.bg, borderRadius: '40px 40px 0 0', boxShadow: '0 -24px 60px rgba(4,18,35,0.22)' }}
     >
       <div
-        ref={ref}
         style={{
           maxWidth: 1200,
           margin: '0 auto',
@@ -60,6 +58,7 @@ const Problem = forwardRef(function Problem(_props, ref) {
         }}
       >
         <div
+          data-reveal
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit,minmax(300px,1fr))',
@@ -96,7 +95,7 @@ const Problem = forwardRef(function Problem(_props, ref) {
           }}
         >
           <div style={gridPair}>
-            <div style={cardBase}>
+            <div className="hover-card" data-reveal style={cardBase}>
               <div style={iconWrap}>
                 <GlobeIcon />
               </div>
@@ -105,7 +104,7 @@ const Problem = forwardRef(function Problem(_props, ref) {
                 <div style={lineStyle}>People live with chronic pain globally</div>
               </div>
             </div>
-            <div style={cardBase}>
+            <div className="hover-card" data-reveal data-reveal-delay="1" style={cardBase}>
               <div style={iconWrap}>
                 <BrokenCircleIcon />
               </div>
@@ -116,7 +115,7 @@ const Problem = forwardRef(function Problem(_props, ref) {
             </div>
           </div>
           <div style={gridPair}>
-            <div style={cardBase}>
+            <div className="hover-card" data-reveal data-reveal-delay="2" style={cardBase}>
               <div style={iconWrap}>
                 <TrendDownIcon />
               </div>
@@ -125,7 +124,7 @@ const Problem = forwardRef(function Problem(_props, ref) {
                 <div style={lineStyle}>Productivity loss reported by sufferers</div>
               </div>
             </div>
-            <div style={{ ...cardBase, background: colors.navy }}>
+            <div className="hover-card" data-reveal data-reveal-delay="3" style={{ ...cardBase, background: colors.navy }}>
               <div style={{ ...iconWrap, background: 'rgba(255,255,255,0.12)' }}>
                 <ClipboardIcon />
               </div>
@@ -153,6 +152,6 @@ const Problem = forwardRef(function Problem(_props, ref) {
       </div>
     </section>
   )
-})
+}
 
 export default Problem

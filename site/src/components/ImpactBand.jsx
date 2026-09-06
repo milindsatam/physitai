@@ -4,6 +4,7 @@ function ImpactBand() {
   return (
     <section style={{ background: colors.navy }}>
       <div
+        data-reveal
         style={{
           maxWidth: 1200,
           margin: '0 auto',
