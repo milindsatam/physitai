@@ -5,7 +5,7 @@ import Solution from '../components/Solution'
 import Technology from '../components/Technology'
 import Serve from '../components/Serve'
 import WhyItMatters from '../components/WhyItMatters'
-import Contact from '../components/Contact'
+import CtaBand from '../components/CtaBand'
 import { useHeroPin } from '../hooks/useHeroPin'
 import { useRevealAnimations } from '../hooks/useRevealAnimations'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
@@ -45,7 +45,7 @@ function HomePage() {
         <Technology />
         <Serve />
         <WhyItMatters />
-        <Contact />
+        <CtaBand />
       </div>
     </>
   )

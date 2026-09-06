@@ -43,7 +43,7 @@ function Footer() {
               <a href="#technology" className="nav-link" style={navLink}>Technology</a>
               <a href="#serve" className="nav-link" style={navLink}>Who We Serve</a>
               <Link to="/about" className="nav-link" style={navLink}>About</Link>
-              <a href="#contact" className="nav-link" style={navLink}>Contact</a>
+              <Link to="/contact" className="nav-link" style={navLink}>Contact</Link>
             </div>
           </div>
           <div style={{ minWidth: 0 }}>

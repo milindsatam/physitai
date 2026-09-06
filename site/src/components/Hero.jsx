@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import heroSpine from '../assets/images/hero-spine.png'
 import { colors, pillPrimaryOnDark, pillOutlineOnDark } from '../lib/theme'
 
@@ -84,9 +85,9 @@ function Hero({ heroRef, pinned }) {
             clinicians can treat with data, not guesswork.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 38 }}>
-            <a href="#contact" className="btn-primary-white" style={pillPrimaryOnDark}>
+            <Link to="/contact" className="btn-primary-white" style={pillPrimaryOnDark}>
               Request a Demo
-            </a>
+            </Link>
             <a href="#solution" className="btn-outline-white" style={pillOutlineOnDark}>
               See How It Works
             </a>

@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom'
 import { colors, eyebrow, pillPrimaryOnDark, pillOutlineOnDark } from '../lib/theme'
 
-function Contact() {
+function CtaBand() {
   return (
     <section id="contact" style={{ background: colors.bg, padding: 'clamp(72px,9vw,128px) clamp(16px,3vw,32px)' }}>
       <div
@@ -38,13 +39,13 @@ function Contact() {
           </p>
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'flex-start', minWidth: 0 }}>
-          <a
-            href="#top"
+          <Link
+            to="/contact"
             className="btn-primary-white"
             style={{ ...pillPrimaryOnDark, padding: '16px 32px' }}
           >
             Request a Demo
-          </a>
+          </Link>
           <a
             href="#solution"
             className="btn-outline-white"
@@ -58,4 +59,4 @@ function Contact() {
   )
 }
 
-export default Contact
+export default CtaBand

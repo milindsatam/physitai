@@ -119,6 +119,16 @@ img {
   transform: scale(1.04);
 }
 
+/* ---- Form fields ---- */
+
+.form-input {
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+.form-input:focus {
+  border-color: var(--teal) !important;
+  box-shadow: 0 0 0 3px rgba(23, 169, 189, 0.15);
+}
+
 /* ---- Scroll reveal ---- */
 
 [data-reveal] {
@@ -153,6 +163,7 @@ img {
   .hover-card-img img,
   .nav-link,
   .site-header,
+  .form-input,
   [data-reveal] {
     transition: none !important;
   }

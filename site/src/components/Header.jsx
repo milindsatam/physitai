@@ -39,13 +39,13 @@ const Header = forwardRef(function Header(_props, ref) {
           <Link to="/about" className="nav-link" style={{ fontSize: 14.5, fontWeight: 500, color: '#0E1726' }}>
             About
           </Link>
-          <a href="#contact" className="nav-link" style={{ fontSize: 14.5, fontWeight: 500, color: '#0E1726' }}>
+          <Link to="/contact" className="nav-link" style={{ fontSize: 14.5, fontWeight: 500, color: '#0E1726' }}>
             Contact
-          </a>
+          </Link>
         </nav>
-        <a href="#contact" className="btn-primary-navy" style={{ ...pillPrimary, flex: '0 0 auto' }}>
+        <Link to="/contact" className="btn-primary-navy" style={{ ...pillPrimary, flex: '0 0 auto' }}>
           Request a Demo
-        </a>
+        </Link>
       </div>
     </header>
   )

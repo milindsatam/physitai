@@ -1,7 +1,7 @@
 import { colors, eyebrow, heading2, bodyCopy, iconChip } from '../lib/theme'
 import { useRevealAnimations } from '../hooks/useRevealAnimations'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
-import Contact from '../components/Contact'
+import CtaBand from '../components/CtaBand'
 import { TargetIcon, HeartIcon, ClipboardIcon, TrendUpIcon, ShieldCheckIcon } from '../components/icons'
 import photoRajani from '../assets/images/team-rajani-jadhav.webp'
 import photoManjusha from '../assets/images/team-manjusha-pathade.webp'
@@ -237,7 +237,7 @@ function AboutPage() {
       </section>
 
       {/* CTA band, reused unchanged */}
-      <Contact />
+      <CtaBand />
     </>
   )
 }

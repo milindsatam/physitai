@@ -139,3 +139,29 @@ export function HeartIcon({ stroke = '#17A9BD' }) {
   )
 }
 
+export function MailIcon({ stroke = '#17A9BD' }) {
+  return (
+    <svg {...base} stroke={stroke}>
+      <rect x="3" y="5" width="18" height="14" rx="2.5" />
+      <path d="M4 6.5 12 12.5 20 6.5" />
+    </svg>
+  )
+}
+
+export function PhoneIcon({ stroke = '#17A9BD' }) {
+  return (
+    <svg {...base} stroke={stroke}>
+      <path d="M6.5 3.5 9.5 3.5 11 8 8.5 9.5 C9.5 12 12 14.5 14.5 15.5 L16 13 20.5 14.5 20.5 17.5 C20.5 19.2 19 20.2 17.4 19.8 C10.9 18.2 5.8 13.1 4.2 6.6 C3.8 5 4.8 3.5 6.5 3.5 Z" />
+    </svg>
+  )
+}
+
+export function PinIcon({ stroke = '#17A9BD' }) {
+  return (
+    <svg {...base} stroke={stroke}>
+      <path d="M12 21.5 C12 21.5 5 15.5 5 10 A7 7 0 0 1 19 10 C19 15.5 12 21.5 12 21.5 Z" />
+      <circle cx="12" cy="10" r="2.5" />
+    </svg>
+  )
+}
+
