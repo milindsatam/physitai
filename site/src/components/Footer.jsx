@@ -62,8 +62,8 @@ function Footer() {
           <div className="footer-col" style={{ minWidth: 0 }}>
             <div style={navLabel}>Contact</div>
             <div className="footer-col-list" style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 20 }}>
-              <div style={navLink}>hello@physitai.example</div>
-              <div style={navLink}>+00 000 000 0000</div>
+              <a href="mailto:physitaillp@gmail.com" className="nav-link" style={navLink}>physitaillp@gmail.com</a>
+              <a href="tel:+919964316900" className="nav-link" style={navLink}>+91 99643 16900</a>
             </div>
           </div>
         </div>

@@ -37,8 +37,8 @@ const inputStyle = {
 }
 
 const details = [
-  { Icon: MailIcon, label: 'Email', value: 'hello@physitai.example', href: 'mailto:hello@physitai.example' },
-  { Icon: PhoneIcon, label: 'Phone', value: '+00 000 000 0000', href: 'tel:+00000000000' },
+  { Icon: MailIcon, label: 'Email', value: 'physitaillp@gmail.com', href: 'mailto:physitaillp@gmail.com' },
+  { Icon: PhoneIcon, label: 'Phone', value: '+91 99643 16900', href: 'tel:+919964316900' },
   { Icon: PinIcon, label: 'Location', value: 'Belagavi, Karnataka, India' },
 ]
 
@@ -127,8 +127,8 @@ function ContactForm() {
           <div style={{ fontSize: 14.5, fontWeight: 600, color: colors.navy }}>Something went wrong.</div>
           <div style={{ fontSize: 13.5, color: colors.muted, marginTop: 4 }}>
             Please try again, or email us directly at{' '}
-            <a href="mailto:hello@physitai.example" style={{ fontWeight: 600 }}>
-              hello@physitai.example
+            <a href="mailto:physitaillp@gmail.com" style={{ fontWeight: 600 }}>
+              physitaillp@gmail.com
             </a>
             .
           </div>
