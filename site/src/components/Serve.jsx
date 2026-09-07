@@ -1,7 +1,7 @@
-import serveClinics from '../assets/images/serve-clinics.png'
-import serveSports from '../assets/images/serve-sports.png'
-import serveHospitals from '../assets/images/serve-hospitals.png'
-import serveDefense from '../assets/images/serve-defense.png'
+import serveClinics from '../assets/images/serve-clinics.webp'
+import serveSports from '../assets/images/serve-sports.webp'
+import serveHospitals from '../assets/images/serve-hospitals.webp'
+import serveDefense from '../assets/images/serve-defense.webp'
 import { colors, heading2 } from '../lib/theme'
 
 const card = {
@@ -75,7 +75,7 @@ function Serve() {
                 style={card}
                 key={it.title}
               >
-                <img src={it.img} alt={it.alt} style={cardImg} />
+                <img src={it.img} alt={it.alt} width={684} height={1026} loading="lazy" style={cardImg} />
                 <div style={{ padding: 28 }}>
                   <div style={cardTitle}>{it.title}</div>
                   <div style={cardLine}>{it.line}</div>
@@ -92,7 +92,7 @@ function Serve() {
                 style={card}
                 key={it.title}
               >
-                <img src={it.img} alt={it.alt} style={cardImg} />
+                <img src={it.img} alt={it.alt} width={684} height={1026} loading="lazy" style={cardImg} />
                 <div style={{ padding: 28 }}>
                   <div style={cardTitle}>{it.title}</div>
                   <div style={cardLine}>{it.line}</div>

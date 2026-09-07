@@ -1,4 +1,4 @@
-import thermalBack from '../assets/images/thermal-back.png'
+import thermalBack from '../assets/images/thermal-back.webp'
 import { colors, eyebrow, heading2, panelShell } from '../lib/theme'
 import { BarsIcon, ScanSearchIcon, ShieldCheckIcon } from './icons'
 
@@ -55,6 +55,9 @@ function Technology() {
             <img
               src={thermalBack}
               alt="Thermal scan of a patient's back"
+              width={1018}
+              height={1018}
+              loading="lazy"
               style={{ display: 'block', width: '100%', height: 'auto', borderRadius: 16, boxShadow: '0 4px 24px rgba(10,46,92,0.10)' }}
             />
           </div>

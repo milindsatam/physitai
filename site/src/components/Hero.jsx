@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import heroSpine from '../assets/images/hero-spine.png'
+import heroSpine from '../assets/images/hero-spine.webp'
 import { colors, pillPrimaryOnDark, pillOutlineOnDark } from '../lib/theme'
 
 function Hero({ heroRef, pinned }) {
@@ -106,6 +106,8 @@ function Hero({ heroRef, pinned }) {
           <img
             src={heroSpine}
             alt="Thermal spine visualization"
+            width={1180}
+            height={1136}
             style={{
               display: 'block',
               width: '100%',

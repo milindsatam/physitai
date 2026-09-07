@@ -171,6 +171,9 @@ function AboutPage() {
                 <img
                   src={member.photo}
                   alt={member.name}
+                  width={917}
+                  height={960}
+                  loading="lazy"
                   style={{
                     display: 'block',
                     width: '100%',

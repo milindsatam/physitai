@@ -29,7 +29,13 @@ const Header = forwardRef(function Header(_props, ref) {
         }}
       >
         <Link to="/" style={{ display: 'flex', alignItems: 'center', flex: '0 0 auto', padding: '2px 0' }}>
-          <img src={logo} alt="PhysiTAI" style={{ display: 'block', height: 'clamp(22px,6.5vw,32px)', width: 'auto' }} />
+          <img
+            src={logo}
+            alt="PhysiTAI"
+            width={200}
+            height={68}
+            style={{ display: 'block', height: 'clamp(22px,6.5vw,32px)', width: 'auto' }}
+          />
         </Link>
         <nav
           className="header-nav-desktop"

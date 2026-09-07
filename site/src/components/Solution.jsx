@@ -1,4 +1,4 @@
-import dashboard from '../assets/images/dashboard.png'
+import dashboard from '../assets/images/dashboard.webp'
 import { colors, eyebrow, heading2, panelShell } from '../lib/theme'
 import { ClockIcon, CameraIcon, ScanSearchIcon, CompassIcon, TrendUpIcon } from './icons'
 
@@ -102,6 +102,9 @@ function Solution() {
               <img
                 src={dashboard}
                 alt="PhysiTAI patient dashboard"
+                width={1274}
+                height={849}
+                loading="lazy"
                 style={{ display: 'block', width: '100%', height: 'auto', borderRadius: 10 }}
               />
               <div

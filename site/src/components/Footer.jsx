@@ -31,6 +31,9 @@ function Footer() {
             <img
               src={logo}
               alt="PhysiTAI"
+              width={200}
+              height={68}
+              loading="lazy"
               style={{ display: 'block', height: 30, width: 'auto', background: colors.white, borderRadius: 8, padding: '6px 10px' }}
             />
             <div style={{ fontSize: 14.5, lineHeight: 1.7, color: '#B9CBE2', marginTop: 20, maxWidth: '34ch' }}>
