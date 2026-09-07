@@ -47,9 +47,7 @@ const gridPair = {
 
 function Problem() {
   return (
-    <section
-      style={{ background: colors.bg, borderRadius: '40px 40px 0 0', boxShadow: '0 -24px 60px rgba(4,18,35,0.22)' }}
-    >
+    <section className="hero-cover" style={{ background: colors.bg }}>
       <div
         style={{
           maxWidth: 1200,

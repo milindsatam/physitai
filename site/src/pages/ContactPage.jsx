@@ -189,7 +189,7 @@ function ContactPage() {
       <section
         style={{
           background: 'linear-gradient(115deg,#07213F 0%,#0A2E5C 45%,#116A8C 100%)',
-          padding: 'clamp(88px,11vw,140px) clamp(24px,4vw,48px) clamp(220px,24vw,300px)',
+          padding: 'clamp(88px,11vw,140px) clamp(24px,4vw,48px) clamp(240px,26vw,340px)',
         }}
       >
         <div style={{ maxWidth: 760, margin: '0 auto', textAlign: 'center' }}>
@@ -230,7 +230,7 @@ function ContactPage() {
         style={{
           position: 'relative',
           zIndex: 2,
-          marginTop: 'calc(-1 * clamp(160px,18vw,220px))',
+          marginTop: 'calc(-1 * clamp(200px,22vw,280px))',
           background: colors.bg,
           padding: '0 clamp(16px,3vw,32px) clamp(56px,7vw,96px)',
         }}

@@ -46,7 +46,7 @@ function Technology() {
             margin: '0 auto',
             padding: 'clamp(72px,9vw,128px) clamp(24px,4vw,48px)',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit,minmax(320px,1fr))',
+            gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
             gap: 'clamp(40px,6vw,88px)',
             alignItems: 'center',
           }}

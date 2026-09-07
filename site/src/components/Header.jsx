@@ -1,9 +1,13 @@
-import { forwardRef } from 'react'
+import { forwardRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/images/physitai-logo.png'
 import { pillPrimary } from '../lib/theme'
+import { MenuIcon } from './icons'
+import MobileNav from './MobileNav'
 
 const Header = forwardRef(function Header(_props, ref) {
+  const [mobileOpen, setMobileOpen] = useState(false)
+
   return (
     <header
       ref={ref}
@@ -28,9 +32,9 @@ const Header = forwardRef(function Header(_props, ref) {
           <img src={logo} alt="PhysiTAI" style={{ display: 'block', height: 'clamp(22px,6.5vw,32px)', width: 'auto' }} />
         </Link>
         <nav
+          className="header-nav-desktop"
           style={{
             marginLeft: 'auto',
-            display: 'flex',
             alignItems: 'center',
             gap: 'clamp(8px,2.2vw,32px)',
             whiteSpace: 'nowrap',
@@ -46,10 +50,34 @@ const Header = forwardRef(function Header(_props, ref) {
             Contact
           </Link>
         </nav>
-        <Link to="/contact" className="btn-primary-navy" style={{ ...pillPrimary, flex: '0 0 auto' }}>
+        <Link to="/contact" className="btn-primary-navy header-actions-desktop" style={{ ...pillPrimary, flex: '0 0 auto' }}>
           Request a Demo
         </Link>
+        <button
+          type="button"
+          className="header-mobile-toggle"
+          onClick={() => setMobileOpen(true)}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-nav-panel"
+          aria-label="Open menu"
+          style={{
+            marginLeft: 'auto',
+            width: 40,
+            height: 40,
+            borderRadius: 12,
+            border: 'none',
+            background: 'transparent',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            padding: 0,
+            flex: '0 0 auto',
+          }}
+        >
+          <MenuIcon />
+        </button>
       </div>
+      <MobileNav open={mobileOpen} onClose={() => setMobileOpen(false)} />
     </header>
   )
 })
