@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { createPortal } from 'react-dom'
 import { Link } from 'react-router-dom'
 import { CloseIcon } from './icons'
 import { colors, pillPrimary } from '../lib/theme'
@@ -26,7 +27,7 @@ function MobileNav({ open, onClose }) {
     }
   }, [open, onClose])
 
-  return (
+  return createPortal(
     <>
       <div className={`mobile-nav-overlay${open ? ' is-open' : ''}`} onClick={onClose} aria-hidden="true" />
       <div
@@ -78,7 +79,8 @@ function MobileNav({ open, onClose }) {
           </Link>
         </nav>
       </div>
-    </>
+    </>,
+    document.body
   )
 }
 
