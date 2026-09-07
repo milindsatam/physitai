@@ -241,7 +241,7 @@ function ContactPage() {
           style={{
             ...panelShell,
             padding: 'clamp(40px,5vw,64px) clamp(28px,4vw,56px)',
-            boxShadow: '0 24px 64px rgba(4,18,35,0.35)',
+            boxShadow: '0 20px 48px rgba(4,18,35,0.16)',
           }}
         >
           <div

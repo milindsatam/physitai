@@ -66,7 +66,7 @@ function Problem() {
         >
           <div style={{ minWidth: 0 }}>
             <div style={eyebrow}>The Problem</div>
-            <h2 style={{ ...heading2, maxWidth: '20ch' }}>Physiotherapy still relies on guesswork.</h2>
+            <h2 style={{ ...heading2, maxWidth: '20ch' }}>Recovery is still difficult to measure objectively.</h2>
           </div>
           <p
             style={{

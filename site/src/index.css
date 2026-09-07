@@ -131,14 +131,34 @@ img {
 
 /* ---- Hero-to-next-section cover (desktop only) ---- */
 
+.hero-section {
+  /* Extra plain-blue space below the content, so .hero-cover's rounded-
+     corner overlap below has clear hero background to sit over instead of
+     clipping the Recovery Progress card, which sits flush with this
+     section's bottom edge. Only needed where the overlap applies (desktop). */
+  padding-bottom: 48px;
+}
+@media (max-width: 699px) {
+  .hero-section {
+    padding-bottom: 0;
+  }
+}
+
 .hero-cover {
   border-radius: 40px 40px 0 0;
   box-shadow: 0 -24px 60px rgba(4, 18, 35, 0.22);
+  /* The rounded top corners cut a notch out of this section's own box right
+     at the seam with the hero above it. Since the two sections otherwise sit
+     flush, that notch exposed the page background instead of hero blue.
+     Pulling this section up by more than the corner radius means the notch
+     falls over the hero's still-blue background instead. */
+  margin-top: -48px;
 }
 @media (max-width: 699px) {
   .hero-cover {
     border-radius: 0;
     box-shadow: none;
+    margin-top: 0;
   }
 }
 

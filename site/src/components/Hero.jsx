@@ -6,6 +6,7 @@ function Hero({ heroRef, pinned }) {
   return (
     <section
       ref={heroRef}
+      className="hero-section"
       style={{
         position: pinned ? 'fixed' : 'relative',
         top: pinned ? 0 : 'auto',
