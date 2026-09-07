@@ -19,7 +19,7 @@ function HomePage() {
   useRevealAnimations()
   useDocumentMeta(
     'PhysiTAI — Objective rehabilitation, powered by AI',
-    'PhysiTAI uses thermal imaging and AI to make pain visible and recovery measurable, so clinicians can treat with data, not guesswork.'
+    'PhysiTAI uses thermal imaging and AI to make pain visible and recovery measurable, so clinicians can treat with objective data at every step.'
   )
 
   useEffect(() => {

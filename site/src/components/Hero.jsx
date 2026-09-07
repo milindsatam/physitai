@@ -83,7 +83,7 @@ function Hero({ heroRef, pinned }) {
             }}
           >
             PhysiTAI uses thermal imaging and AI to make pain visible and recovery measurable, so
-            clinicians can treat with data, not guesswork.
+            care is guided by data.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 38 }}>
             <Link to="/contact" className="btn-primary-white" style={pillPrimaryOnDark}>

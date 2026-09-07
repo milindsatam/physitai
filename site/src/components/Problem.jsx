@@ -79,8 +79,8 @@ function Problem() {
               textWrap: 'pretty',
             }}
           >
-            Recovery is measured with subjective scales and manual notes, which leads to
-            inconsistent outcomes and slower results.
+            Traditional tools like pain scales and manual notes cannot show inflammation,
+            asymmetry, or fatigue in real time, which makes progress hard to measure objectively.
           </p>
         </div>
 
@@ -119,7 +119,7 @@ function Problem() {
               </div>
               <div style={{ marginTop: 'auto', paddingTop: 40 }}>
                 <div style={numberStyle}>30 to 40%</div>
-                <div style={lineStyle}>Productivity loss reported by sufferers</div>
+                <div style={lineStyle}>Productivity loss reported by those affected</div>
               </div>
             </div>
             <div className="hover-card" data-reveal data-reveal-delay="3" style={{ ...cardBase, background: colors.navy }}>

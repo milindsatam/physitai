@@ -99,7 +99,7 @@ function AboutPage() {
             }}
           >
             PhysiTAI brings thermal imaging and AI together to turn physiotherapy into a
-            data-driven practice, so clinicians can treat with evidence instead of guesswork.
+            data-driven practice, so clinicians can back every decision with objective evidence.
           </p>
         </div>
       </section>
