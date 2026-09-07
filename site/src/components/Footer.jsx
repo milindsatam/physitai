@@ -20,13 +20,14 @@ function Footer() {
     <footer style={{ background: colors.navy }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: 'clamp(64px,8vw,104px) clamp(24px,4vw,48px) 36px' }}>
         <div
+          className="footer-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))',
             gap: 'clamp(32px,4vw,56px)',
           }}
         >
-          <div style={{ minWidth: 0 }}>
+          <div className="footer-col" style={{ minWidth: 0 }}>
             <img
               src={logo}
               alt="PhysiTAI"
@@ -48,9 +49,9 @@ function Footer() {
               </a>
             </div>
           </div>
-          <div style={{ minWidth: 0 }}>
+          <div className="footer-col" style={{ minWidth: 0 }}>
             <div style={navLabel}>Navigate</div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 20 }}>
+            <div className="footer-col-list" style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 20 }}>
               <Link to="/#solution" className="nav-link" style={navLink}>Solution</Link>
               <Link to="/#technology" className="nav-link" style={navLink}>Technology</Link>
               <Link to="/#serve" className="nav-link" style={navLink}>Who We Serve</Link>
@@ -58,15 +59,16 @@ function Footer() {
               <Link to="/contact" className="nav-link" style={navLink}>Contact</Link>
             </div>
           </div>
-          <div style={{ minWidth: 0 }}>
+          <div className="footer-col" style={{ minWidth: 0 }}>
             <div style={navLabel}>Contact</div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 20 }}>
+            <div className="footer-col-list" style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 20 }}>
               <div style={navLink}>hello@physitai.example</div>
               <div style={navLink}>+00 000 000 0000</div>
             </div>
           </div>
         </div>
         <div
+          className="footer-bottom"
           style={{
             borderTop: '1px solid #1D446F',
             marginTop: 'clamp(40px,5vw,64px)',

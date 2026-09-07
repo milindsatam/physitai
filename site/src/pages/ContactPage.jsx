@@ -225,17 +225,25 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* Floating white panel, overlapping the band above */}
+      {/* Floating white panel, overlapping the band above. The wrapping
+          section itself stays transparent so the navy band shows through
+          in the gutters around the card while it overlaps — giving it a
+          floating look instead of just an early section boundary. */}
       <section
         style={{
           position: 'relative',
           zIndex: 2,
           marginTop: 'calc(-1 * clamp(200px,22vw,280px))',
-          background: colors.bg,
           padding: '0 clamp(16px,3vw,32px) clamp(56px,7vw,96px)',
         }}
       >
-        <div style={{ ...panelShell, padding: 'clamp(40px,5vw,64px) clamp(28px,4vw,56px)' }}>
+        <div
+          style={{
+            ...panelShell,
+            padding: 'clamp(40px,5vw,64px) clamp(28px,4vw,56px)',
+            boxShadow: '0 24px 64px rgba(4,18,35,0.35)',
+          }}
+        >
           <div
             style={{
               display: 'grid',

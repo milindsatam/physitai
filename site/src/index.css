@@ -142,6 +142,27 @@ img {
   }
 }
 
+/* ---- Footer ---- */
+
+@media (max-width: 640px) {
+  .footer-grid {
+    justify-items: center;
+    text-align: center;
+  }
+  .footer-col img {
+    margin: 0 auto;
+  }
+  .footer-col-list {
+    align-items: center;
+  }
+  .footer-bottom {
+    /* justify-content:space-between is set inline; !important is needed to
+       actually center it here. */
+    justify-content: center !important;
+    text-align: center;
+  }
+}
+
 /* ---- Buttons ---- */
 
 .btn-primary-navy,
