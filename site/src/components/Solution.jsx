@@ -40,8 +40,8 @@ const loopGrid = {
   gap: 24,
 }
 
-const stageRow = (num, label) => (
-  <div style={{ display: 'flex', alignItems: 'baseline', gap: 14 }} key={num}>
+const stageRow = (num, title, line) => (
+  <div style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }} key={num}>
     <div
       style={{
         fontFamily: "'Space Grotesk', sans-serif",
@@ -54,8 +54,11 @@ const stageRow = (num, label) => (
     >
       {num}
     </div>
-    <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, fontSize: 16, color: colors.navy }}>
-      {label}
+    <div style={{ minWidth: 0 }}>
+      <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, fontSize: 16, color: colors.navy }}>
+        {title}
+      </div>
+      <div style={{ fontSize: 13.5, lineHeight: 1.55, color: colors.muted, marginTop: 3 }}>{line}</div>
     </div>
   </div>
 )
@@ -77,10 +80,10 @@ function Solution() {
             <div style={{ minWidth: 0 }} />
             <div style={{ minWidth: 0, maxWidth: 620 }}>
               <div style={eyebrow}>Our Solution</div>
-              <h2 style={heading2}>A 4-stage protocol that turns every session into data.</h2>
+              <h2 style={heading2}>Distinct signals, one shared recovery story.</h2>
               <p style={{ fontSize: 16.5, lineHeight: 1.75, color: colors.muted, margin: '20px 0 0', maxWidth: '56ch', textWrap: 'pretty' }}>
-                The AIIR-Phys protocol runs alongside the session, from baseline scan to
-                discharge metrics.
+                Each input keeps its meaning. Structured analytics organise the evidence, and
+                clinicians interpret it.
               </p>
             </div>
           </div>
@@ -110,6 +113,21 @@ function Solution() {
               <div
                 style={{
                   position: 'absolute',
+                  right: 'clamp(28px,3vw,40px)',
+                  top: 'clamp(28px,3vw,40px)',
+                  background: 'rgba(7,33,63,0.72)',
+                  borderRadius: 999,
+                  padding: '7px 14px',
+                  fontSize: 11.5,
+                  fontWeight: 600,
+                  color: colors.white,
+                }}
+              >
+                Illustrative concept, not patient data.
+              </div>
+              <div
+                style={{
+                  position: 'absolute',
                   left: 'clamp(28px,3vw,40px)',
                   bottom: 'clamp(28px,3vw,40px)',
                   background: colors.white,
@@ -135,21 +153,21 @@ function Solution() {
                   <ClockIcon />
                 </div>
                 <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: 'clamp(21px,2vw,25px)', letterSpacing: '-0.02em', color: colors.white, marginTop: 26, textWrap: 'pretty' }}>
-                  AIIR-Phys 4-Stage Protocol
+                  How the workflow runs
                 </div>
                 <div style={{ fontSize: 15, lineHeight: 1.65, color: '#C6D8EC', marginTop: 12 }}>
-                  Baseline to discharge, every session measured.
+                  From assessment to a reviewed recovery report.
                 </div>
               </div>
               <div className="hover-card" data-reveal data-reveal-delay="2" style={{ background: colors.card, borderRadius: 16, padding: 32, flex: 1 }}>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-                  {stageRow('01', 'Pre-Session Baseline')}
+                  {stageRow('01', 'Capture', 'Record pain, movement and function with relevant imaging.')}
                   <div style={{ height: 1, background: colors.border }} />
-                  {stageRow('02', 'Mid-Session Adaptability')}
+                  {stageRow('02', 'Organise', 'Bring observations together and calculate defined measures.')}
                   <div style={{ height: 1, background: colors.border }} />
-                  {stageRow('03', 'Post-Session Validation')}
+                  {stageRow('03', 'Review', 'The clinician checks findings, limitations and any AI summary.')}
                   <div style={{ height: 1, background: colors.border }} />
-                  {stageRow('04', 'Program Discharge Metrics')}
+                  {stageRow('04', 'Report', 'Use the reviewed report to support the next conversation.')}
                 </div>
               </div>
             </div>
@@ -168,15 +186,15 @@ function Solution() {
                 <div style={loopIcon}>
                   <CameraIcon />
                 </div>
-                <div style={loopTitle}>Capture</div>
-                <div style={loopLine}>High-resolution thermal scans in seconds.</div>
+                <div style={loopTitle}>Listen</div>
+                <div style={loopLine}>Patient-reported pain and context, recorded from the patient.</div>
               </div>
               <div className="hover-card" data-reveal data-reveal-delay="1" style={loopTile}>
                 <div style={loopIcon}>
                   <ScanSearchIcon />
                 </div>
-                <div style={loopTitle}>Analyze</div>
-                <div style={loopLine}>AI reads inflammation, asymmetry, perfusion.</div>
+                <div style={loopTitle}>Assess</div>
+                <div style={loopLine}>Range of motion and functional assessment, tracked over time.</div>
               </div>
             </div>
             <div style={loopGrid}>
@@ -184,15 +202,15 @@ function Solution() {
                 <div style={loopIcon}>
                   <CompassIcon />
                 </div>
-                <div style={loopTitle}>Guide</div>
-                <div style={loopLine}>Protocol prompts during the session.</div>
+                <div style={loopTitle}>Observe</div>
+                <div style={loopLine}>Thermal imaging for visual context. Relative signal only, not temperature.</div>
               </div>
               <div className="hover-card" data-reveal data-reveal-delay="3" style={loopTile}>
                 <div style={loopIcon}>
                   <TrendUpIcon />
                 </div>
-                <div style={loopTitle}>Track</div>
-                <div style={loopLine}>Session-over-session recovery trend.</div>
+                <div style={loopTitle}>Review</div>
+                <div style={loopLine}>AI drafts summaries. The clinician reviews and decides.</div>
               </div>
             </div>
           </div>

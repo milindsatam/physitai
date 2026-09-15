@@ -43,10 +43,10 @@ const gridPair = {
 }
 
 const items = [
-  { img: serveClinics, alt: 'Therapist treating a seated patient', title: 'Physiotherapy Clinics', line: 'Objective assessment and progress tracking.' },
-  { img: serveSports, alt: 'Therapist assessing an athlete knee', title: 'Sports and Athletic Teams', line: 'Injury prevention and faster return to play.' },
-  { img: serveHospitals, alt: 'Patient walking with parallel bars assisted by a nurse', title: 'Hospitals and Rehab Centers', line: 'In-patient rehab and post-surgical recovery.' },
-  { img: serveDefense, alt: 'Clinician attending to a kneeling soldier', title: 'Defense and Tactical Units', line: 'Field readiness and injury management.' },
+  { img: serveClinics, alt: 'Therapist treating a seated patient', title: 'Physiotherapy Clinics', line: 'Structured assessment and clearer progress records.' },
+  { img: serveSports, alt: 'Therapist assessing an athlete knee', title: 'Sports and Athletic Teams', line: 'Recovery tracking to support return-to-play decisions.' },
+  { img: serveHospitals, alt: 'Patient walking with parallel bars assisted by a nurse', title: 'Hospitals and Rehab Centers', line: 'In-patient rehabilitation and post-surgical recovery.' },
+  { img: serveDefense, alt: 'Clinician attending to a kneeling soldier', title: 'Defense and Tactical Units', line: 'Rehabilitation tracking for physically demanding roles.' },
 ]
 
 const delays = ['0', '1', '2', '3']

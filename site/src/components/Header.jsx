@@ -57,7 +57,7 @@ const Header = forwardRef(function Header(_props, ref) {
           </Link>
         </nav>
         <Link to="/contact" className="btn-primary-navy header-actions-desktop" style={{ ...pillPrimary, flex: '0 0 auto' }}>
-          Request a Demo
+          Get in touch
         </Link>
         <button
           type="button"

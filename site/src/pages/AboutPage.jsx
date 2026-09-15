@@ -30,10 +30,10 @@ const cardLine = {
 }
 
 const values = [
-  { Icon: TargetIcon, title: 'Objective care', line: 'Decisions backed by data, not subjective scales.' },
+  { Icon: TargetIcon, title: 'Structured records', line: 'Assessments organised consistently, so progress is easier to review.' },
   { Icon: HeartIcon, title: 'Accessible to all', line: 'Affordable, portable technology built to reach underserved settings.' },
-  { Icon: ClipboardIcon, title: 'Evidence-based', line: 'Standardized protocols that make results consistent and repeatable.' },
-  { Icon: TrendUpIcon, title: 'Real impact', line: 'Faster recovery and better quality of life for patients and communities.' },
+  { Icon: ClipboardIcon, title: 'Repeatable assessment', line: 'Consistent methods that make review easier over time.' },
+  { Icon: TrendUpIcon, title: 'Clinician-led', line: 'Technology that supports professional judgment, never replaces it.' },
 ]
 
 const team = [
@@ -55,7 +55,7 @@ function AboutPage() {
   useRevealAnimations()
   useDocumentMeta(
     'About PhysiTAI — Our mission and team',
-    'PhysiTAI brings thermal imaging and AI together to turn physiotherapy into a data-driven practice. Learn about our mission, values, and the team behind it.'
+    'PhysiTAI brings patient-reported pain, movement and function, and thermal imaging into one structured view. Learn about our mission, values, and the team behind it.'
   )
 
   return (
@@ -86,7 +86,7 @@ function AboutPage() {
               textWrap: 'pretty',
             }}
           >
-            Making rehabilitation objective, measurable, and accessible.
+            Making rehabilitation measurable and accessible.
           </h1>
           <p
             style={{
@@ -98,8 +98,8 @@ function AboutPage() {
               textWrap: 'pretty',
             }}
           >
-            PhysiTAI brings thermal imaging and AI together to turn physiotherapy into a
-            data-driven practice, so clinicians can back every decision with objective evidence.
+            PhysiTAI brings patient-reported pain, movement and function, and thermal imaging
+            into one structured view, so clinicians can review recovery with more context.
           </p>
         </div>
       </section>
@@ -110,10 +110,10 @@ function AboutPage() {
           <div style={eyebrow}>Our Mission</div>
           <h2 style={{ ...heading2, margin: '18px auto 0' }}>Rehabilitation you can measure.</h2>
           <p style={{ ...bodyCopy, margin: '20px auto 0', maxWidth: '62ch' }}>
-            Recovery has always been hard to see. PhysiTAI captures what clinicians could only
-            estimate before, mapping inflammation and asymmetry, guiding treatment in real time,
-            and tracking recovery with objective data. Our goal is simple: better outcomes, fewer
-            relapses, and care that reaches everyone who needs it.
+            Recovery has always been hard to see in one place. PhysiTAI brings patient-reported
+            pain, movement and function, and thermal context into a consistent view, so
+            clinicians can review progress over time. Our goal is simple: clearer recovery
+            conversations and care that reaches more people.
           </p>
         </div>
       </section>

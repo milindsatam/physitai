@@ -37,7 +37,7 @@ function Footer() {
               style={{ display: 'block', height: 30, width: 'auto', background: colors.white, borderRadius: 8, padding: '6px 10px' }}
             />
             <div style={{ fontSize: 14.5, lineHeight: 1.7, color: '#B9CBE2', marginTop: 20, maxWidth: '34ch' }}>
-              Making pain visible. Making recovery measurable.
+              Making recovery measurable. Clinician-led rehabilitation intelligence.
             </div>
             <div style={{ fontSize: 13, color: '#7E9CC2', marginTop: 14 }}>
               A product by{' '}

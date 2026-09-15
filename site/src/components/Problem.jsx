@@ -79,8 +79,10 @@ function Problem() {
               textWrap: 'pretty',
             }}
           >
-            Traditional tools like pain scales and manual notes cannot show inflammation,
-            asymmetry, or fatigue in real time, which makes progress hard to measure objectively.
+            A pain score tells one part of the story. A movement assessment tells another. When
+            observations sit across separate notes, images and visits, understanding what changed
+            takes time. PhysiTAI is being developed to bring these inputs into one consistent
+            view.
           </p>
         </div>
 
@@ -140,8 +142,8 @@ function Problem() {
                   Paper-based
                 </div>
                 <div style={{ fontSize: 15, lineHeight: 1.65, color: '#C6D8EC', marginTop: 14, maxWidth: '26ch' }}>
-                  Progress tracked mostly on paper, with no real-time view of inflammation or
-                  fatigue
+                  Progress recorded mostly on paper, with limited structured tracking between
+                  visits.
                 </div>
               </div>
             </div>

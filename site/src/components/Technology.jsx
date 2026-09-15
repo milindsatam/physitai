@@ -63,11 +63,11 @@ function Technology() {
           </div>
           <div data-reveal data-reveal-delay="1" style={{ minWidth: 0 }}>
             <div style={eyebrow}>The Technology</div>
-            <h2 style={{ ...heading2, maxWidth: '22ch' }}>Thermal imaging meets clinical AI.</h2>
+            <h2 style={{ ...heading2, maxWidth: '22ch' }}>Structured underneath, clear at the point of care.</h2>
             <p style={{ fontSize: 16.5, lineHeight: 1.75, color: colors.muted, margin: '20px 0 0', maxWidth: '54ch', textWrap: 'pretty' }}>
-              PhysiTAI captures high-resolution thermal data and applies AI to detect
-              inflammation, asymmetry, and perfusion patterns. It turns what clinicians feel into
-              biomarkers they can measure.
+              PhysiTAI separates what is observed, what is calculated, and what a clinician
+              concludes. Thermal imaging adds visual context, structured analytics organise the
+              inputs, and AI drafts summaries for the clinician to review.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginTop: 40 }}>
               <div className="hover-card" data-reveal style={featureRow}>
@@ -75,8 +75,8 @@ function Technology() {
                   <BarsIcon />
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <div style={featureTitle}>Objective biomarkers</div>
-                  <div style={featureLine}>Thermal asymmetry, recovery score, perfusion index.</div>
+                  <div style={featureTitle}>Relative thermal context</div>
+                  <div style={featureLine}>Visual thermal signal for context, not calibrated temperature.</div>
                 </div>
               </div>
               <div className="hover-card" data-reveal data-reveal-delay="1" style={featureRow}>
@@ -84,8 +84,8 @@ function Technology() {
                   <ScanSearchIcon />
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <div style={featureTitle}>AI-powered analysis</div>
-                  <div style={featureLine}>Detects patterns the eye can miss.</div>
+                  <div style={featureTitle}>Deterministic analytics</div>
+                  <div style={featureLine}>Defined calculations organise inputs, kept separate from interpretation.</div>
                 </div>
               </div>
               <div className="hover-card" data-reveal data-reveal-delay="2" style={featureRow}>
@@ -93,8 +93,8 @@ function Technology() {
                   <ShieldCheckIcon />
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <div style={featureTitle}>Non-contact and radiation-free</div>
-                  <div style={featureLine}>Safe, portable, repeatable.</div>
+                  <div style={featureTitle}>Clinician-led interpretation</div>
+                  <div style={featureLine}>AI drafts summaries. The clinician reviews and decides.</div>
                 </div>
               </div>
             </div>

@@ -32,10 +32,10 @@ function CtaBand() {
               textWrap: 'pretty',
             }}
           >
-            See PhysiTAI in action.
+            Let's talk about PhysiTAI.
           </div>
           <p style={{ fontSize: 16.5, lineHeight: 1.75, color: '#C6D8EC', margin: '18px 0 0', maxWidth: '44ch', textWrap: 'pretty' }}>
-            Book a demo and see how objective rehabilitation works in your setting.
+            Tell us about your setting and we will share how PhysiTAI is being developed.
           </p>
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'flex-start', minWidth: 0 }}>
@@ -44,7 +44,7 @@ function CtaBand() {
             className="btn-primary-white"
             style={{ ...pillPrimaryOnDark, padding: '16px 32px' }}
           >
-            Request a Demo
+            Get in touch
           </Link>
           <Link
             to="/#solution"

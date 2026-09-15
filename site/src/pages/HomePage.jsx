@@ -4,7 +4,7 @@ import Problem from '../components/Problem'
 import Solution from '../components/Solution'
 import Technology from '../components/Technology'
 import Serve from '../components/Serve'
-import WhyItMatters from '../components/WhyItMatters'
+import ClinicalPositioning from '../components/ClinicalPositioning'
 import CtaBand from '../components/CtaBand'
 import { useHeroPin } from '../hooks/useHeroPin'
 import { useRevealAnimations } from '../hooks/useRevealAnimations'
@@ -18,8 +18,8 @@ function HomePage() {
   const { pinned, height } = useHeroPin(heroRef)
   useRevealAnimations()
   useDocumentMeta(
-    'PhysiTAI — Objective rehabilitation, powered by AI',
-    'PhysiTAI uses thermal imaging and AI to make pain visible and recovery measurable, so clinicians can treat with objective data at every step.'
+    'PhysiTAI — Making recovery measurable',
+    'PhysiTAI is a rehabilitation intelligence platform in development, bringing patient-reported pain, movement and thermal imaging into one clinician-reviewed view of recovery.'
   )
 
   useEffect(() => {
@@ -44,7 +44,7 @@ function HomePage() {
         <Solution />
         <Technology />
         <Serve />
-        <WhyItMatters />
+        <ClinicalPositioning />
         <CtaBand />
       </div>
     </>

@@ -180,7 +180,7 @@ function ContactPage() {
   useRevealAnimations()
   useDocumentMeta(
     'Contact PhysiTAI — Get in touch',
-    'Tell us about your clinic, team, or unit, and we will show you how PhysiTAI works in your setting.'
+    'Tell us about your clinic, team, or unit, and we will share how PhysiTAI is being developed.'
   )
 
   return (
@@ -219,8 +219,8 @@ function ContactPage() {
               textWrap: 'pretty',
             }}
           >
-            Tell us about your clinic, team, or unit, and we will show you how PhysiTAI works in
-            your setting.
+            Tell us about your clinic, team, or unit, and we will share how PhysiTAI is being
+            developed.
           </p>
         </div>
       </section>

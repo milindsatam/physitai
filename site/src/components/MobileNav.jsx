@@ -75,7 +75,7 @@ function MobileNav({ open, onClose }) {
             onClick={onClose}
             style={{ ...pillPrimary, textAlign: 'center', marginTop: 20 }}
           >
-            Request a Demo
+            Get in touch
           </Link>
         </nav>
       </div>

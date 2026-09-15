@@ -70,7 +70,7 @@ function Hero({ heroRef, pinned }) {
               textWrap: 'pretty',
             }}
           >
-            Objective rehabilitation, powered by AI.
+            Making recovery measurable.
           </h1>
           <p
             style={{
@@ -82,16 +82,19 @@ function Hero({ heroRef, pinned }) {
               textWrap: 'pretty',
             }}
           >
-            PhysiTAI uses thermal imaging and AI to make pain visible and recovery measurable, so
-            care is guided by data.
+            PhysiTAI brings patient-reported pain, movement and function, and thermal imaging
+            into one structured view of rehabilitation progress, with clinicians at the centre.
           </p>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, marginTop: 38 }}>
             <Link to="/contact" className="btn-primary-white" style={pillPrimaryOnDark}>
-              Request a Demo
+              Get in touch
             </Link>
             <Link to="/#solution" className="btn-outline-white" style={pillOutlineOnDark}>
               See How It Works
             </Link>
+          </div>
+          <div style={{ fontSize: 13.5, color: '#9FB4CC', marginTop: 18 }}>
+            In development. Designed to support clinical review.
           </div>
         </div>
         <div
@@ -117,6 +120,21 @@ function Hero({ heroRef, pinned }) {
               objectPosition: 'bottom',
             }}
           />
+          <div
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 24,
+              zIndex: 3,
+              fontSize: 11.5,
+              fontWeight: 600,
+              letterSpacing: '0.02em',
+              color: 'rgba(255,255,255,0.6)',
+              maxWidth: 160,
+            }}
+          >
+            Illustrative view, not patient data.
+          </div>
           <div
             style={{
               position: 'absolute',
@@ -186,18 +204,18 @@ function Hero({ heroRef, pinned }) {
                 color: '#7A879A',
               }}
             >
-              Thermal Asymmetry
+              Thermal context
             </div>
             <div
               style={{
                 fontFamily: "'Space Grotesk', sans-serif",
                 fontWeight: 700,
-                fontSize: 20,
+                fontSize: 14.5,
                 color: colors.navy,
                 marginTop: 4,
               }}
             >
-              1.4 &deg;C
+              Relative signal only
             </div>
           </div>
         </div>
