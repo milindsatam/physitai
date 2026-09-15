@@ -124,21 +124,6 @@ function Hero({ heroRef, pinned }) {
             style={{
               position: 'absolute',
               left: 0,
-              top: 24,
-              zIndex: 3,
-              fontSize: 11.5,
-              fontWeight: 600,
-              letterSpacing: '0.02em',
-              color: 'rgba(255,255,255,0.6)',
-              maxWidth: 160,
-            }}
-          >
-            Illustrative view, not patient data.
-          </div>
-          <div
-            style={{
-              position: 'absolute',
-              left: 0,
               bottom: -28,
               zIndex: 4,
               background: colors.white,
