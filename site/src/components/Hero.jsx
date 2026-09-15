@@ -89,7 +89,7 @@ function Hero({ heroRef, pinned }) {
             <Link to="/contact" className="btn-primary-white" style={pillPrimaryOnDark}>
               Get in touch
             </Link>
-            <Link to="/#solution" className="btn-outline-white" style={pillOutlineOnDark}>
+            <Link to="/#how-it-works" className="btn-outline-white" style={pillOutlineOnDark}>
               See How It Works
             </Link>
           </div>

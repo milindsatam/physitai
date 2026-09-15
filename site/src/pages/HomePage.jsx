@@ -1,10 +1,11 @@
 import { useEffect, useRef } from 'react'
 import Hero from '../components/Hero'
 import Problem from '../components/Problem'
-import Solution from '../components/Solution'
+import HowItWorks from '../components/HowItWorks'
+import TheWorkflow from '../components/TheWorkflow'
 import Technology from '../components/Technology'
-import Serve from '../components/Serve'
 import ClinicalPositioning from '../components/ClinicalPositioning'
+import Serve from '../components/Serve'
 import CtaBand from '../components/CtaBand'
 import { useHeroPin } from '../hooks/useHeroPin'
 import { useRevealAnimations } from '../hooks/useRevealAnimations'
@@ -41,10 +42,11 @@ function HomePage() {
 
       <div style={{ position: 'relative', zIndex: 10 }}>
         <Problem />
-        <Solution />
+        <HowItWorks />
+        <TheWorkflow />
         <Technology />
-        <Serve />
         <ClinicalPositioning />
+        <Serve />
         <CtaBand />
       </div>
     </>

@@ -47,7 +47,7 @@ function CtaBand() {
             Get in touch
           </Link>
           <Link
-            to="/#solution"
+            to="/#how-it-works"
             className="btn-outline-white"
             style={{ ...pillOutlineOnDark, padding: '14.5px 30px' }}
           >

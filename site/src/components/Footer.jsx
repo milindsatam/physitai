@@ -55,7 +55,7 @@ function Footer() {
           <div className="footer-col" style={{ minWidth: 0 }}>
             <div style={navLabel}>Navigate</div>
             <div className="footer-col-list" style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 20 }}>
-              <Link to="/#solution" className="nav-link" style={navLink}>Solution</Link>
+              <Link to="/#how-it-works" className="nav-link" style={navLink}>How It Works</Link>
               <Link to="/#technology" className="nav-link" style={navLink}>Technology</Link>
               <Link to="/#serve" className="nav-link" style={navLink}>Who We Serve</Link>
               <Link to="/about" className="nav-link" style={navLink}>About</Link>

@@ -175,6 +175,17 @@ export function MenuIcon({ stroke = '#0A2E5C' }) {
   )
 }
 
+export function MessageIcon({ stroke = '#17A9BD' }) {
+  return (
+    <svg {...base} stroke={stroke}>
+      <rect x="3" y="5" width="18" height="12" rx="3" />
+      <polyline points="6,17 6,20.5 10,17" />
+      <line x1="7" y1="9.5" x2="17" y2="9.5" />
+      <line x1="7" y1="13" x2="14" y2="13" />
+    </svg>
+  )
+}
+
 export function CloseIcon({ stroke = '#0A2E5C' }) {
   return (
     <svg {...base} stroke={stroke}>
