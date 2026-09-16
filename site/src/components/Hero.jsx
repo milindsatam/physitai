@@ -1,6 +1,77 @@
 import { Link } from 'react-router-dom'
-import heroSpine from '../assets/images/hero-spine.webp'
-import { colors, pillPrimaryOnDark, pillOutlineOnDark } from '../lib/theme'
+import thermalBack from '../assets/images/thermal-back.webp'
+import { colors, pillPrimaryOnDark, pillOutlineOnDark, iconChip } from '../lib/theme'
+import { MessageIcon, CompassIcon, ScanSearchIcon, ArrowRightIcon } from './icons'
+
+const rowIcon = { ...iconChip, width: 40, height: 40 }
+
+const rowIndex = {
+  fontFamily: "'Space Grotesk', sans-serif",
+  fontWeight: 700,
+  fontSize: 10.5,
+  letterSpacing: '0.08em',
+  color: colors.teal,
+}
+
+const rowTitle = {
+  fontFamily: "'Space Grotesk', sans-serif",
+  fontWeight: 600,
+  fontSize: 14.5,
+  color: colors.navy,
+  marginTop: 2,
+}
+
+const rowSub = {
+  fontSize: 12.5,
+  color: colors.muted,
+  marginTop: 2,
+}
+
+function BarsMark() {
+  const heights = [8, 15, 11, 20, 13]
+  return (
+    <div style={{ display: 'flex', alignItems: 'flex-end', gap: 3, height: 22 }}>
+      {heights.map((h, i) => (
+        <div
+          key={i}
+          style={{ width: 4, height: h, borderRadius: 2, background: i === 3 ? colors.teal : colors.border }}
+        />
+      ))}
+    </div>
+  )
+}
+
+function TrendMark() {
+  return (
+    <svg width="48" height="22" viewBox="0 0 48 22" fill="none" aria-hidden="true">
+      <polyline
+        points="2,19 13,14 22,16 33,7 46,3"
+        stroke={colors.teal}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+    </svg>
+  )
+}
+
+const inputRows = [
+  {
+    index: '01',
+    Icon: MessageIcon,
+    title: 'Patient-reported pain',
+    sub: 'Self-reported, in context',
+    Mark: BarsMark,
+  },
+  {
+    index: '02',
+    Icon: CompassIcon,
+    title: 'Movement and function',
+    sub: 'ROM and functional assessment',
+    Mark: TrendMark,
+  },
+]
 
 function Hero({ heroRef, pinned }) {
   return (
@@ -97,110 +168,101 @@ function Hero({ heroRef, pinned }) {
             In development. Designed to support clinical review.
           </div>
         </div>
-        <div
-          style={{
-            position: 'relative',
-            minWidth: 0,
-            marginLeft: 'clamp(-64px,-3vw,0px)',
-            alignSelf: 'end',
-            marginBottom: 'calc(-1 * clamp(80px,10vw,140px))',
-          }}
-        >
-          <img
-            src={heroSpine}
-            alt="Thermal spine visualization"
-            width={1180}
-            height={1136}
-            style={{
-              display: 'block',
-              width: '100%',
-              height: 'auto',
-              maxHeight: 'clamp(340px,44vw,540px)',
-              objectFit: 'contain',
-              objectPosition: 'bottom',
-            }}
-          />
+        <div style={{ position: 'relative', minWidth: 0 }}>
           <div
+            className="hover-card"
+            data-reveal
+            data-reveal-delay="1"
             style={{
-              position: 'absolute',
-              left: 0,
-              bottom: -28,
-              zIndex: 4,
-              background: colors.white,
-              borderRadius: 16,
-              padding: '16px 20px',
-              boxShadow: '0 18px 44px rgba(4,18,35,0.32)',
-              minWidth: 186,
+              background: 'rgba(255,255,255,0.96)',
+              border: '1px solid rgba(255,255,255,0.5)',
+              borderRadius: 24,
+              boxShadow: '0 24px 60px rgba(4,18,35,0.28)',
+              padding: 'clamp(20px,2.6vw,28px)',
+              maxWidth: 460,
+              marginLeft: 'auto',
+              marginRight: 'auto',
             }}
           >
-            <div
-              style={{
-                fontSize: 11.5,
-                fontWeight: 600,
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#7A879A',
-              }}
-            >
-              Recovery Progress
-            </div>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginTop: 6 }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+              <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: colors.teal }}>
+                The Recovery Picture
+              </div>
               <div
                 style={{
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontWeight: 700,
-                  fontSize: 26,
-                  color: colors.navy,
+                  fontSize: 11,
+                  fontWeight: 600,
+                  color: colors.tealDeep,
+                  background: colors.tealTint,
+                  borderRadius: 999,
+                  padding: '4px 10px',
+                  flex: '0 0 auto',
                 }}
               >
-                72%
+                Illustrative
               </div>
-              <div style={{ fontSize: 12, color: colors.teal, fontWeight: 600 }}>on track</div>
             </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginTop: 20 }}>
+              {inputRows.map((row) => (
+                <div key={row.index} style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
+                  <div style={rowIcon}>
+                    <row.Icon />
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={rowIndex}>{row.index}</div>
+                    <div style={rowTitle}>{row.title}</div>
+                    <div style={rowSub}>{row.sub}</div>
+                  </div>
+                  <div style={{ flex: '0 0 auto', marginTop: 6 }}>
+                    <row.Mark />
+                  </div>
+                </div>
+              ))}
+              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 14 }}>
+                <div style={rowIcon}>
+                  <ScanSearchIcon />
+                </div>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={rowIndex}>03</div>
+                  <div style={rowTitle}>Thermal context</div>
+                  <div style={rowSub}>Relative signal only</div>
+                </div>
+                <img
+                  src={thermalBack}
+                  alt=""
+                  width={40}
+                  height={40}
+                  style={{ width: 40, height: 40, borderRadius: 10, objectFit: 'cover', display: 'block', flex: '0 0 auto' }}
+                />
+              </div>
+            </div>
+
+            <div style={{ borderTop: `1px solid ${colors.border}`, marginTop: 20, paddingTop: 14 }}>
+              <div style={{ fontSize: 12, color: colors.mutedSoft, textAlign: 'center' }}>
+                Structured analytics plus clinician review
+              </div>
+            </div>
+
             <div
               style={{
-                height: 6,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                background: colors.tealTint,
                 borderRadius: 999,
-                background: '#EEF3FB',
-                marginTop: 10,
-                overflow: 'hidden',
+                padding: '12px 18px',
+                marginTop: 16,
               }}
             >
-              <div style={{ width: '72%', height: '100%', background: colors.teal }} />
+              <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 600, fontSize: 14.5, color: colors.navy }}>
+                Recovery report
+              </span>
+              <ArrowRightIcon stroke={colors.tealDeep} />
             </div>
-          </div>
-          <div
-            style={{
-              position: 'absolute',
-              right: 0,
-              top: 24,
-              background: colors.white,
-              borderRadius: 16,
-              padding: '14px 18px',
-              boxShadow: '0 4px 24px rgba(4,18,35,0.28)',
-            }}
-          >
-            <div
-              style={{
-                fontSize: 11.5,
-                fontWeight: 600,
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: '#7A879A',
-              }}
-            >
-              Thermal context
-            </div>
-            <div
-              style={{
-                fontFamily: "'Space Grotesk', sans-serif",
-                fontWeight: 700,
-                fontSize: 14.5,
-                color: colors.navy,
-                marginTop: 4,
-              }}
-            >
-              Relative signal only
+
+            <div style={{ fontSize: 11.5, color: colors.mutedSoft, textAlign: 'center', marginTop: 14 }}>
+              Conceptual view, not patient data.
             </div>
           </div>
         </div>

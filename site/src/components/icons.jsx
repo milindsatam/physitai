@@ -186,6 +186,15 @@ export function MessageIcon({ stroke = '#17A9BD' }) {
   )
 }
 
+export function ArrowRightIcon({ stroke = '#0A2E5C' }) {
+  return (
+    <svg {...base} stroke={stroke}>
+      <line x1="4" y1="12" x2="19" y2="12" />
+      <polyline points="13,6 19,12 13,18" />
+    </svg>
+  )
+}
+
 export function CloseIcon({ stroke = '#0A2E5C' }) {
   return (
     <svg {...base} stroke={stroke}>
