@@ -82,7 +82,11 @@ function Footer() {
             justifyContent: 'space-between',
           }}
         >
-          <div style={{ fontSize: 13, color: '#7E9CC2' }}>&copy; 2026 PhysiTAI. All rights reserved.</div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '6px 16px' }}>
+            <div style={{ fontSize: 13, color: '#7E9CC2' }}>&copy; 2026 PhysiTAI. All rights reserved.</div>
+            <Link to="/privacy" className="nav-link" style={{ fontSize: 13, color: '#7E9CC2' }}>Privacy Policy</Link>
+            <Link to="/terms" className="nav-link" style={{ fontSize: 13, color: '#7E9CC2' }}>Terms of Use</Link>
+          </div>
           <div style={{ fontSize: 13, color: '#7E9CC2' }}>Rehabilitation intelligence</div>
         </div>
       </div>
