@@ -39,18 +39,6 @@ function Footer() {
             <div style={{ fontSize: 14.5, lineHeight: 1.7, color: '#B9CBE2', marginTop: 20, maxWidth: '34ch' }}>
               Making recovery measurable. Clinician-led rehabilitation intelligence.
             </div>
-            <div style={{ fontSize: 13, color: '#7E9CC2', marginTop: 14 }}>
-              A product by{' '}
-              <a
-                href="https://simplifyne.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="nav-link"
-                style={{ color: '#DCE7F4', fontWeight: 600 }}
-              >
-                Simplifyne Technologies
-              </a>
-            </div>
           </div>
           <div className="footer-col" style={{ minWidth: 0 }}>
             <div style={navLabel}>Navigate</div>
@@ -87,7 +75,18 @@ function Footer() {
             <Link to="/privacy" className="nav-link" style={{ fontSize: 13, color: '#7E9CC2' }}>Privacy Policy</Link>
             <Link to="/terms" className="nav-link" style={{ fontSize: 13, color: '#7E9CC2' }}>Terms of Use</Link>
           </div>
-          <div style={{ fontSize: 13, color: '#7E9CC2' }}>Rehabilitation intelligence</div>
+          <div style={{ fontSize: 13, color: '#7E9CC2' }}>
+            A product by{' '}
+            <a
+              href="https://simplifyne.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-link"
+              style={{ color: '#7E9CC2', fontWeight: 600 }}
+            >
+              Simplifyne Technologies
+            </a>
+          </div>
         </div>
       </div>
     </footer>
